@@ -1,0 +1,9 @@
+image: java:8
+
+pipelines:
+  default:
+    - step:
+        caches:
+          - gradle
+        script: # Modify the commands below to build your repository.
+          - bash ./gradlew build jacocoTestReport
